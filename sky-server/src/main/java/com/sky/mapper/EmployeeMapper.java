@@ -1,8 +1,10 @@
 package com.sky.mapper;
 
 import com.github.pagehelper.Page;
+import com.sky.annotation.AutoFill;
 import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
+import com.sky.enumeration.OperationType;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -21,6 +23,7 @@ public interface EmployeeMapper {
      * 添加员工
      * @param employee
      */
+    @AutoFill(OperationType.INSERT)
     void sava(Employee employee);
 
     /**
@@ -34,6 +37,7 @@ public interface EmployeeMapper {
      * 根据主键动态修改属性
      * @param employee
      */
+    @AutoFill(OperationType.UPDATE)
     void update(Employee employee);
 
     /**
