@@ -11,6 +11,5 @@ public interface DishFlavorMapper {
      * 批量插入口味数据
      * @param flavors
      */
-    static void insertBatch(List<DishFlavor> flavors) {
-    }
+    void insertBatch(List<DishFlavor> flavors);
 }
