@@ -7,7 +7,13 @@
     <insert id="insertBatch">
         insert into dish_flavor(dish_id, name, value) values
         <foreach collection="flavors" item="flavor" separator=",">
-            (#{flavor.dish_id},#{flavor.name},#{flavor.value})
+            (#{flavor.dishId},#{flavor.name},#{flavor.value})
         </foreach>
     </insert>
+    <delete id="deleteById">
+        delete from dish_flavor where id=#{id}
+    </delete>
+    <select id="getByDishId" resultType="com.sky.entity.DishFlavor">
+        select * from dish_flavor where id=#{id}
+    </select>
 </mapper>
