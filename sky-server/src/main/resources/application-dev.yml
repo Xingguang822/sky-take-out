@@ -18,5 +18,4 @@ sky:
     password: ddd123456
     database: 10
   wechat:
-    appid:
-    secret:
+
