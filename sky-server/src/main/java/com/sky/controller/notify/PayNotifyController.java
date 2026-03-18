@@ -1,4 +1,4 @@
-package com.sky.controller.user;
+package com.sky.controller.notify;
 
 import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSON;
@@ -28,6 +28,7 @@ public class PayNotifyController {
     private OrderService orderService;
     @Autowired
     private WeChatProperties weChatProperties;
+
 
     /**
      * 支付成功回调
